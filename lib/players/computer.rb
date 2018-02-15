@@ -72,10 +72,10 @@ module Players
       d = cells.map { |value| value == 'X' }
       m = CORNER_SITUATIONS.find { |a, b, c| d[a] && d[b] }
       return i2m(m[2]) if m
-      
-      # x _ _     x _ o
-      # _ o x  >  _ o X
-      # _ _ _     _ _ _
+
+      # x _ _     x _ _
+      # _ o _  >  o o _
+      # _ _ x     _ _ x
       '4' if (d[0] && d[8]) || (d[2] && d[6])
     end
 
